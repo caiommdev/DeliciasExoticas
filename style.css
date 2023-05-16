@@ -6,7 +6,7 @@
     scroll-behavior: smooth;
   }
 footer{
-    background-color: rgb(104, 103, 103);
+    background-color: rgb(80, 77, 77);
 }
 
 li{
@@ -43,6 +43,10 @@ footer>img{
     width: 30px;    
     height: 30px;
     margin: 10px;
+}
+
+input{
+    background-color: aquamarine;
 }
 
 .hero{
@@ -99,20 +103,68 @@ footer>img{
     width:100%;
 }
 
-.cardapio{
-     
-}
 .carousel{
     max-height: 500px;
+    width: 1000px;
+    border-radius: 15px;
+}
+
+.slide{
+    border-radius: 15px;
 }
 .carousel-item img{
     max-height: 500px;
+    width: 100px;
+    border-radius: 15px;
 }
+
+.cardapio{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cardapio h1{
+    margin-top: 50px;
+}
+
+.cardapio h2{
+    margin-top: 50px;
+}
+
+.cardapioItens{
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 60px;
+}
+
+.cardapioItens li{
+    font-weight: 600;
+    font-size: 25px;
+}
+
+#cardapioIntro{
+    background-image: url(imagens/papelMesa.jpeg);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#menuImg{
+    margin-top: 50px;
+    width: 700px;
+}
+
 #exoticos{
     height: 500px;
 }
 
 #aboutUs{
+    background-color: beige;
     display: flex;
     flex-direction: row-reverse;
     justify-content: center;
@@ -124,6 +176,8 @@ footer>img{
     width: 600px;
     height: 470px;
     margin: 20px;
+    border-radius: 15px;
+    box-shadow: 10px 10px 8px #888888
 }
 
 #aboutUs article{
@@ -143,11 +197,22 @@ footer>img{
 }
 
 #location{
-    margin: 0;
-    padding: 0;
+    background-color: rgb(80, 77, 77);
 }
 
 #gmap_canvas{
     width: 100%; 
     height: 100%;
+}
+
+#contacts{
+    background-color: rgb(80, 77, 77);
+}
+
+#info{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
 }
