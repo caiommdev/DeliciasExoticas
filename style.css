@@ -1,193 +1,232 @@
-*{
+@font-face {
+  font-family: 'Edo';
+  src: url(fonts/edosz.ttf) format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root{
+  --white-hero: rgba(255, 255, 255,0.857); 
+  --orange: hsl(31, 84%, 50%);
+  --dark-orange: hsl(31, 100%, 53%);
+  --grey: hsl(0, 0%, 47%);
+  --ligth-grey: rgb(243, 235, 235);
+}
+
+* {
     margin: 0;
     padding: 0;
     border: 0;
-    font-family: 'Courier New', Courier, monospace;
     scroll-behavior: smooth;
   }
-footer{
-    background-color: rgb(80, 77, 77);
-}
+  
+  footer {
+    background-color: var(--grey);
+  }
 
-li{
+  footer i {
+    color: var(--ligth-grey);
+    width: 60px;
+    font-size: 3em;
+  }
+  
+  li {
     font-size: 30px;
     font-weight: 800px;
-}
-
-a, a:link, a:visited{
+  }
+  
+  a,
+  a:link,
+  a:visited {
+    font-family: 'Edo';
     font-size: 30px;
     font-weight: 800px;
     text-decoration: none;
     text-decoration: none;
-    color:  rgba(255, 255, 255, 0.733);
-}
-
-a:hover{
+    color: var(--white-hero);
+  }
+  
+  a:hover {
+    font-family: 'Edo';
     font-weight: bold;
-}
-
-h2{
+    color:  var(--orange);
+  }
+  
+  h2 {
+    font-family: 'Edo';
     font-size: 80px;
-}
-
-footer{
+  }
+  
+  footer {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-}
-
-footer>img{
-    width: 30px;    
-    height: 30px;
-    margin: 10px;
-}
-
-input{
+  }
+  
+  input {
     background-color: aquamarine;
-}
+  }
 
-.hero{
-    height: 700px;
+  .hero {
+    height: 100vh;
     background: url(imagens/thumb-churrasco-edit.jpg);
     background-color: black;
-}
-
-.heroTitles h1{
-    font-style: normal;  
-    font-weight: 700;  
-    font-size: 80px;  
-    line-height: 42px;  
-    text-align: center;  
-    letter-spacing: 0.2px;  
-    color: rgba(255, 255, 255, 0.733);
-    padding-top: 210px;
-}
-
-.heroTitles h2{
-    font-style: normal;  
-    font-weight: 700;  
-    font-size: 60px; 
-    line-height: 30px;  
-    text-align: center;  
-    letter-spacing: 0.2px;  
-    color: rgba(255, 255, 255, 0.733);
-    margin-top: 80px;
-}
-
-.menu{
+  }
+  
+  .heroTitles h1 {
+    font-family: 'Edo';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 150px;
+    line-height: 42px;
+    text-align: center;
+    letter-spacing: 0.2px;
+    color: var(--white-hero);
+    padding-top: 300px;
+  }
+  
+  .heroTitles h2 {
+    font-family: 'Edo';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 30px;
+    text-align: center;
+    letter-spacing: 0.2px;
+    color: var(--white-hero);
+    margin-top: 300px;
+  }
+  
+  .menu {
     width: 150px;
     height: 40px;
     padding-top: 5px;
     margin: 0 auto;
-}
-.menu>ul{
+  }
+  
+  .menu>ul {
     list-style-type: none;
     display: flex;
     align-items: center;
     flex-direction: row;
     justify-content: space-evenly;
     gap: 60px;
-}
-.menu>ul>li{
+  }
+  
+  .menu>ul>li {
+    font-family: 'Edo';
     font-weight: 500;
-    color: #d7d0c8;
-}
-
-.mapouter{
-    position:relative;
-    text-align:right;
-    height:100%;
-    width:100%;
-}
-
-.carousel{
+  }
+  
+  .mapouter {
+    position: relative;
+    text-align: right;
+    height: 100%;
+    width: 100%;
+  }
+  
+  .carousel {
     max-height: 500px;
     width: 1000px;
     border-radius: 15px;
-}
-
-.slide{
+  }
+  
+  .slide {
     border-radius: 15px;
-}
-.carousel-item img{
+  }
+  
+  .carousel-item img {
     max-height: 500px;
     width: 100px;
     border-radius: 15px;
-}
-
-.cardapio{
+  }
+  
+  .cardapio {
+    font-family: 'Edo';
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-.cardapio h1{
+  }
+  
+  .cardapio h1 {
+    font-family: 'Edo';
     margin-top: 50px;
-}
-
-.cardapio h2{
+  }
+  
+  .cardapio h2 {
+    font-family: 'Edo';
     margin-top: 50px;
     font-size: 80px;
     font-weight: bold;
-}
-
-.cardapioItens{
+  }
+  
+  .cardapioItens {
     list-style-type: none;
     display: flex;
     align-items: center;
     flex-direction: row;
     justify-content: space-evenly;
     gap: 60px;
-}
-
-.cardapioItens li{
+  }
+  
+  .cardapioItens li {
+    font-family: 'Edo';
     font-weight: 600;
     font-size: 30px;
-}
-
-.main{
-    background: url(imagens/papel.jpeg);
+  }
+  
+  .main {
+    /* background: url(imagens/papel.jpeg); */
+    background-color: hsl(23, 49%, 82%);
     background-size: cover;
-}
+  }
 
-#cardapioIntro{
+  .colorTwo{
+    color:  var(--orange);
+  }
+  
+  #cardapioIntro {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-}
-
-#cardapioIntro h1{
-    font-size: 5pc;
+  }
+  
+  #cardapioIntro h1 {
+    font-family: 'Edo';
+    font-size: 15pc;
     font-weight: 900px;
     margin-top: 50px;
-}
+    margin-bottom: 50px;
+    color: var(--dark-orange);
+  }
 
-#menuImg{
+  #menuImg {
     margin-top: 50px;
     width: 700px;
-}
-
-#exoticos{
+  }
+  
+  #exoticos {
     height: 500px;
-}
-
-#aboutUs{
+  }
+  
+  #aboutUs {
     display: flex;
     flex-direction: row-reverse;
     justify-content: center;
     align-items: center;
     height: 600px;
-}
-
-#aboutUs h2{
+  }
+  
+  #aboutUs h2 {
+    font-family: 'Edo';
     margin-top: 30px;
     margin-left: 100px;
-    font-size: 80px;
-}
-
-#aboutUsImg{
+    font-size: 100px;
+  }
+  
+  #aboutUsImg {
     width: 600px;
     height: 470px;
     margin: 20px;
@@ -195,41 +234,45 @@ input{
     margin-left: 20px;
     border-radius: 15px;
     box-shadow: 10px 10px 8px #888888
-}
-
-#aboutUs article{
+  }
+  
+  #aboutUs article {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-
-#aboutUs>article>p{
+  }
+  
+  #aboutUs>article>p {
+    font-family: 'Edo';
     font-size: 30px;
     font-weight: 600;
     letter-spacing: 0.2px;
     margin-top: 30px;
     margin-left: 100px;
     text-align: center;
-}
-
-#location{
-    background-color: rgb(80, 77, 77);
-}
-
-#gmap_canvas{
-    width: 100%; 
+  }
+  
+  #location {
+    background-color: var(--grey);
+  }
+  
+  #gmap_canvas {
+    width: 100%;
     height: 100%;
-}
-
-#contacts{
-    background-color: rgb(80, 77, 77);
-}
-
-#info{
+  }
+  
+  #contacts {
+    background-color: var(--grey);
+  }
+  
+  #info {
+    font-family: 'Roboto', sans-serif !important;
+    font-size: 25px;
+    font-weight: 560;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    color: white;
-}
+    color: var(--ligth-grey);
+  }
