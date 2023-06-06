@@ -63,10 +63,6 @@
     justify-content: center;
     align-items: center;
   }
-  
-  input {
-    background-color: aquamarine;
-  }
 
   .hero {
     height: 100vh;
@@ -185,7 +181,15 @@
   .colorTwo{
     color:  var(--orange);
   }
-  
+
+  .form-input input{
+    margin: 0px 10px 10px;
+  }
+
+  .form-input {
+    margin: 0px 10px 0px;
+  }
+
   #cardapioIntro {
     display: flex;
     flex-direction: column;
@@ -251,6 +255,10 @@
     margin-top: 30px;
     margin-left: 100px;
     text-align: center;
+  }
+
+  #forms{
+    background-color: hsl(23, 49%, 82%);;
   }
   
   #location {
