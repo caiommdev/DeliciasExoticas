@@ -26,7 +26,8 @@ form.addEventListener("submit", (event) =>{
 
     let isMessageValid = messageValidation(messageText.value.trim());
     if(!isMessageValid)
-        alert("mensagem n valida")    
+        alert("mensagem n valida");
+
     //Enviar
     //form.submit();
 });
