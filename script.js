@@ -30,6 +30,9 @@ form.addEventListener("submit", (event) =>{
 
     //Enviar
     //form.submit();
+    let submitMessage = document.createElement("h2");
+    submitMessage.innerText = "ENVIADO! 🐮"
+    form.appendChild(submitMessage);
 });
 
 function nameValidation(name) {
