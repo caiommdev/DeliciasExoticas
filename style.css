@@ -182,14 +182,6 @@
     color:  var(--orange);
   }
 
-  .form-input input{
-    margin: 0px 10px 10px;
-  }
-
-  .form-input {
-    margin: 0px 10px 0px;
-  }
-
   #cardapioIntro {
     display: flex;
     flex-direction: column;
@@ -283,4 +275,152 @@
     justify-content: space-between;
     align-items: center;
     color: var(--ligth-grey);
+  }
+                          /* styling form */
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 500px;
+    margin: 0 auto;
+  }
+
+  label {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+  input, 
+  select, 
+  textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1.1rem;
+  }
+
+  #submit-button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
+    font-size: 1.1rem;
+    cursor: pointer;
+  }
+
+                              /* styling radio buttons */
+  label, input[type="radio"] {
+    line-height: 2.1ex;
+  }
+  
+  input[type="radio"] {
+      position: absolute;
+      left: -999em;
+  }
+  
+  input[type="radio"] + label {
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+  }
+  
+  input[type="radio"] + label::before {
+    content: "";
+    display: inline-block;
+    vertical-align: -25%;
+    height: 2ex;
+    width: 2ex;
+    background-color: white;
+    border: 1px solid rgb(166, 166, 166);
+    border-radius: 4px;
+    box-shadow: inset 0 2px 5px rgba(0,0,0,0.25);
+    margin-right: 0.5em;
+  }
+  
+  input[type="radio"]:checked + label::before {
+    background: radial-gradient(circle at center, #01b42e .6ex, white .7ex);
+  }
+  
+  input[type="radio"] + label::before {
+    border-radius: 50%;
+  }
+
+                              /* styling checkboxs */
+/* The container */
+  .container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+  /* Hide the browser's default checkbox */
+  .container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+
+  /* Create a custom checkbox */
+  .semi-checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #01b42e !important;
+  }
+
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+  }
+
+  /* On mouse-over, add a grey background color */
+  .container:hover input ~ .checkmark {
+    background-color: #ccc;
+  }
+
+  /* When the checkbox is checked, add a blue background */
+  .container input:checked ~ .checkmark {
+    background-color: #01b42e;
+  }
+
+  /* Create the checkmark/indicator (hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+
+  /* Show the checkmark when checked */
+  .container input:checked ~ .checkmark:after {
+    display: block;
+  }
+
+  /* Style the checkmark/indicator */
+  .container .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
   }
