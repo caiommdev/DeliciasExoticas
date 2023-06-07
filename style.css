@@ -207,6 +207,11 @@
     height: 500px;
   }
   
+  #nobres {
+    margin-top: 350px;
+    margin-bottom: 200px;
+  }
+
   #aboutUs {
     display: flex;
     flex-direction: row-reverse;
@@ -290,6 +295,15 @@
     margin-bottom: 5px;
   }
 
+  h1{
+    text-align: center;
+    font-family: Edo;
+    margin-top: 150px;
+    margin-bottom: 50px;
+    font-weight: bolder;
+    font-size: 4em;
+  }
+
   input, 
   select, 
   textarea {
@@ -308,6 +322,7 @@
     color: #fff;
     font-size: 1.1rem;
     cursor: pointer;
+    margin-bottom: 20px;
   }
 
                               /* styling radio buttons */
