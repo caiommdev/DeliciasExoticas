@@ -21,15 +21,15 @@ function handleMarkBox() {
 
     email.addEventListener("click", (event) => {
         if(email.checked === true && sms.checked === false){
-            //adicionar classe de semi marcado para checkbox -> todos os metodos
             allMethodsSpan.classList.add("semi-checkmark");
+            allMethods.checked = false;
         }
         else if(email.checked === true && sms.checked === true){
             allMethodsSpan.classList.remove("semi-checkmark");
             allMethods.checked = true;
         }
         else if(email.checked === false && sms.checked === true){
-            //adicionar classe de semi marcado para checkbox -> todos os metodos
+            allMethods.checked = false;
             allMethodsSpan.classList.add("semi-checkmark");
         }
         else {
@@ -41,16 +41,16 @@ function handleMarkBox() {
 
     sms.addEventListener("click", (event) => {
         if(sms.checked === true && email.checked === false){
-            //adicionar classe de semi marcado para checkbox -> todos os metodos
             allMethodsSpan.classList.add("semi-checkmark");
+            allMethods.checked = false;
         }
         else if(sms.checked === true && email.checked === true){
             allMethodsSpan.classList.remove("semi-checkmark");
             allMethods.checked = true;
         }
         else if(sms.checked === false && email.checked === true){
-            //adicionar classe de semi marcado para checkbox -> todos os metodos
             allMethodsSpan.classList.add("semi-checkmark");
+            allMethods.checked = false;
         }
         else {
             allMethodsSpan.classList.remove("semi-checkmark");
