@@ -10,23 +10,23 @@ form.addEventListener("submit", (event) =>{
 
     let isNameValid = nameValidation(nameInput.value.trim());
     if (!isNameValid)
-        alert("Nome n valido");
+        alert("Nome não é valido, precisa ter seu nome e pelo menos 1 sobrenome");
     
     let isEmailValid = emailValidation(emailInput.value.trim());
     if(!isEmailValid)
-        alert("Email n valido");
+        alert("Email não é valido");
 
     let isPhoneValid = phoneValidation(phoneInput.value.trim());
     if(!isPhoneValid)
-        alert("Telefone n valido");
+        alert("Telefone não é valido");
 
     let isSeletctInputValid = selectValidation(typeOfMeatSelect.value.trim());
     if(!isSeletctInputValid)
-        alert("select n valido");
+        alert("Você precisa selecionar algum corte de carne");
 
     let isMessageValid = messageValidation(messageText.value.trim());
     if(!isMessageValid)
-        alert("mensagem n valida");
+        alert("Mensagem não é valida, ela deve ter pelo menos 5 caracteres");
 
     //Enviar
     //form.submit();
