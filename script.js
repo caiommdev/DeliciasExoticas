@@ -2,46 +2,71 @@ const form = document.querySelector("form");
 const nameInput = document.querySelector("#name");
 const emailInput = document.querySelector("#email");
 const phoneInput = document.querySelector("#phone");
-const typeOfMeatSelect = document.querySelector("#tipos-carnes");
+const typeOfMeat = document.querySelector("#inputTipoCarne");
 const messageText = document.querySelector("#message");
+
+const radioButtons = document.querySelectorAll(".radioButton");
+const markboxs = document.querySelectorAll(".check");
 
 form.addEventListener("submit", (event) =>{
     event.preventDefault();
 
     let isNameValid = nameValidation(nameInput.value.trim());
-    if (!isNameValid)
+    if (!isNameValid){
         alert("Nome não é valido, precisa ter seu nome e pelo menos 1 sobrenome");
+        return;
+    }
     
     let isEmailValid = emailValidation(emailInput.value.trim());
-    if(!isEmailValid)
+    if(!isEmailValid){
         alert("Email não é valido");
+        return;
+    }
 
     let isPhoneValid = phoneValidation(phoneInput.value.trim());
-    if(!isPhoneValid)
+    if(!isPhoneValid){
         alert("Telefone não é valido");
+        return;
+    }
 
-    let isSeletctInputValid = selectValidation(typeOfMeatSelect.value.trim());
-    if(!isSeletctInputValid)
+    let isRadionButtons = radioButtonsValidation(radioButtons);
+    console.log(isRadionButtons)
+    if(!isRadionButtons){
+        alert("Você precisa selecionar um tipo de corte");
+        return;
+    }  
+
+    let isDropdownInputValid = dropdownValidation(typeOfMeat.value.trim());
+    if(!isDropdownInputValid){
         alert("Você precisa selecionar algum corte de carne");
+        return;
+    }
 
+    let isMarkboxsValid = markboxsValidation(markboxs);
+    if(!isMarkboxsValid){
+        alert("Você precisa selecionar algum tipo de notificação");
+        return;
+    }
+        
     let isMessageValid = messageValidation(messageText.value.trim());
-    if(!isMessageValid)
+    if(!isMessageValid){
         alert("Mensagem não é valida, ela deve ter pelo menos 5 caracteres");
+        return;
+    }
 
     //Enviar
     //form.submit();
-    let submitMessage = document.createElement("h2");
-    submitMessage.innerText = "ENVIADO! 🐮"
-    form.appendChild(submitMessage);
+    alert("FORMULARIO VALIDO!!!");
 });
 
+//validação do formulario
 function nameValidation(name) {
     if (name === "")
         return false;
     
-    if (name.split(" ").length < 1)
+    if (name.split(" ").length <= 1)
         return false;
-
+    
     return true;
 }
 
@@ -67,14 +92,32 @@ function phoneValidation(phone) {
     return false;
 }
 
-function selectValidation(selectInput) {
-    if (selectInput === "")
+function radioButtonsValidation(radioButtons) {
+    let response = false;
+    radioButtons.forEach(radio => {
+        if(radio.children[0].classList.contains("checkRadioButton") === true)
+            response = true;
+    });
+    return response;
+}
+
+function dropdownValidation(dropdownInput) {
+    if (dropdownInput === "")
         return false;
     
-    if (selectInput === "nao-escolhido")
+    if (dropdownInput === null)
         return false;
     
     return true;
+}
+
+function markboxsValidation(markboxs) {
+    let response = false;
+    markboxs.forEach(mark => {
+        if(mark.classList.contains("checkedCheckbox") === true)
+            response = true;
+    });
+    return response;
 }
 
 function messageValidation(message) {

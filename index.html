@@ -150,42 +150,61 @@
         <input type="text" name="phone" id="phone" placeholder="Telefone *" required>
       </div>
 
-      <div id="radios">
-        <input type="radio" name="tipo-carne" id="exoticas" value="Carnes-exóticas">
-        <label for="exoticas">Carnes exóticas</label>
-        <input type="radio" name="tipo-carne" id="tradicionais" value="Carnes-tradicionais">
-        <label for="tradicionais">Carnes tradicionais</label>
-        <input type="radio" name="tipo-carne" id="ambas" value="Ambas" checked>
-        <label for="ambas">Ambas</label>
+      <h3>Tipos de cortes</h2>
+      <div class="flex checkPainel">
+        <div class="flex">
+          <div class="radioButton">
+            <div></div>
+          </div>
+          <p class="radiotext">Exóticos</p>
+        </div>
+        <div class="flex">
+          <div class="radioButton">
+            <div></div>
+          </div>
+          <p class="radiotext">Tradicionais</p>
+        </div>
+
+        <div class="flex">
+          <div class="radioButton">
+            <div></div>
+          </div>
+          <p class="radiotext">Ambos</p>
+        </div>
+      </div>
+      
+
+      <div class="select">
+        <input id="inputTipoCarne" type="text" name="tipo" placeholder="Selecione sua carne favorita"
+          onfocus="dropdown(0)" onblur="dropdown(1)" readonly></input>
+
+        <div class="dropdown">
+          <div class="itens">
+            <div id="item1" class="item" onmousedown="tipo(1)">Bovina</div>
+            <div id="item2" class="item" onmousedown="tipo(2)">Suina</div>
+            <div id="item3" class="item" onmousedown="tipo(3)">Aves</div>
+            <div id="item4" class="item" onmousedown="tipo(4)">Frutos do Mar</div>
+            <div id="item5" class="item" onmousedown="tipo(5)">Outros</div>
+          </div>
+        </div>
       </div>
 
-      <div>
-        <select name="tipos-carnes" id="tipos-carnes">
-          <option value="nao-escolhido">Não escolhido</option>
-          <option value="Bovinas">Bovina</option>
-          <option value="Suina">Suína</option>
-          <option value="Aves">Aves</option>
-          <option value="Frutos-do-mar">Frutos do Mar</option>
-          <option value="Outros">Outros</option>
-        </select>
-      </div>
 
-      <div>
-        <label class="container">Todos os Meios
-          <input type="checkbox" id="todos-os-meios" name="todos-os-meios" value="Todos-os-meios">
-          <span class="checkmark" id="todos-os-meios-span"></span>
-        </label>
-        
-        <label class="container">E-mail
-          <input type="checkbox" id="email-checkbox" name="E-mail" value="E-mail">
-          <span class="checkmark"></span>
-        </label>
-        
-        <label class="container">SMS
-          <input type="checkbox" id="sms" name="SMS" value="SMS">
-          <span class="checkmark"></span>
-        </label>
-      </div>
+      <h3>Como ser notificado</h3>
+        <div class="flex checkPainel">
+          <div class="flex">
+            <div class="check" id="all-methods"></div>
+            <p> Todos</p>
+          </div>
+          <div class="flex">
+            <div class="check" id="email-checkbox"></div>
+            <p> E-mail </p>
+          </div>
+          <div class="flex">
+            <div class="check" id="sms"></div>
+            <p> SMS </p>
+          </div>
+        </div>
 
       <div>
         <textarea name="text" id="message" cols="30" rows="10" placeholder="Menssagem *" required></textarea>
@@ -233,7 +252,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
     crossorigin="anonymous"></script>
-  <script src="mark-box-handler.js"></script>
+  <script src="form-handler.js"></script>
   <script src="script.js"></script>
 </body>
 
